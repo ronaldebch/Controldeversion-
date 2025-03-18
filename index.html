@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar las versiones de las APP</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+            overflow: hidden; /* Elimina cualquier posible desplazamiento innecesario */
+            transition: background-image 1s ease-in-out; /* Transición suave para el cambio de fondo */
+        }
+
+        /* Título grande y atractivo */
+        h1 {
+            font-size: 40px;
+            background: linear-gradient(10deg, #3e4b75 40%, #ff5722 40%, #ffeb3b 70%);
+            color: transparent;
+            background-clip: text;
+            margin-top: 20px;
+        }
+
+        /* Estilos para las tarjetas de cada app */
+        .app-card {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(249, 247, 247, 0.1);
+            display: inline-block;
+            width: 180px;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .app-card h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .app-card button {
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos individuales para los botones */
+        .mia-button {
+            background-color: #ff5722;
+        }
+        .ponal-button {
+            background-color: #207f00;
+        }
+        .osecac-button {
+            background-color: #3136ce;
+        }
+        .hooli-button {
+            background-color: #f6ff00;
+        }
+        .rn-hooli-button {
+            background-color: #008149;
+        }
+
+        .app-card button:hover {
+            opacity: 0.8;
+        }
+
+        /* Contenedor de todas las tarjetas */
+        .apps-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+            margin-top: 20px;
+            overflow-x: auto;
+            padding: 0 10px;
+        }
+
+        /* Estilo para las imágenes dentro de cada tarjeta */
+        .app-card img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(246, 244, 244, 0.1);
+            margin-bottom: 15px;
+        }
+
+        /* Contenedor para el logo */
+        .logo-container {
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        /* Colores para los textos dentro del contenedor del logo con gradiente */
+        .logo-container h3 {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(50deg, #ffffff, #ffffff, #fffffd);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Reducción de la sombra para mayor nitidez */
+        }
+
+        .logo-container p {
+            font-size: 16px;
+            font-weight: normal;
+            background: linear-gradient(50deg, #ffffff, #ffffff, #ffffff);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Reducción de la sombra para mayor nitidez */
+        }
+
+        /* Estilo para el reloj */
+        .clock {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(120deg, hsl(232, 100%, 50%), #ff6a00, #ffeb3b);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el texto dinámico de color según la hora */
+        .daytime h3, .daytime p {
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .nighttime h3, .nighttime p {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar las versiones de las APP</h1>
+
+    <!-- Contenedor del reloj -->
+    <div class="clock" id="clock"></div>
+
+    <!-- Contenedor de botones -->
+    <div class="apps-container">
+        <!-- MIA -->
+        <div class="app-card">
+            <img src="https://play-lh.googleusercontent.com/l_J0UhLRYnzgBC_BjWmr05EmYcoa3YrW_E3YpXNX9LquIKpY-cIXt5Iu2piRz-zSLQ=w480-h960-rw" alt="Imagen de MIA">
+            <h2>MIA</h2>
+            <a href="https://play.google.com/store/apps/details?id=me.miaid.wallet&hl=es_AR" target="_blank">
+                <button class="mia-button">Verificar versión</button>
+            </a>
+        </div>
+
+        <!-- PONAL -->
+        <div class="app-card">
+            <img src="https://play-lh.googleusercontent.com/9p-H8KJPah3i3fSXvcRwRihMxUPFZmg606VRpEUeYOmH9mPLU3ag9otNue0fs17QiQ=w480-h960-rw" alt="Imagen de PONAL">
+            <h2>PONAL</h2>
+            <a href="https://play.google.com/store/apps/details?id=me.miaid.ponalmia&hl=es_AR" target="_blank">
+                <button class="ponal-button">Verificar versión</button>
+            </a>
+        </div>
+
+        <!-- OSECAC -->
+        <div class="app-card">
+            <img src="https://play-lh.googleusercontent.com/Saeph7Dkkft4UV_x7fX_cS6AsOdR38iqAPvV7iF6gXklTmITofvORWmsrzPvei71ww=w480-h960-rw" alt="Imagen de OSECAC">
+            <h2>OSECAC</h2>
+            <a href="https://play.google.com/store/apps/details?id=me.miaid.osecac&hl=es_AR&pli=1" target="_blank">
+                <button class="osecac-button">Verificar versión</button>
+            </a>
+        </div>
+
+        <!-- hooli -->
+        <div class="app-card">
+            <img src="https://play-lh.googleusercontent.com/qb_Xf_BkIGz1IShB6yqwLxdAAZyqXhYWPd8NdpM4QwZ5DDpiPnE_EUQFe8PGegidjA=s96-rw" alt="Imagen de hooli">
+            <h2>hooli</h2>
+            <a href="https://play.google.com/store/apps/details?id=net.airata.hooli.app&hl=es_AR" target="_blank">
+                <button class="hooli-button">Verificar versión</button>
+            </a>
+        </div>
+
+        <!-- RN Hooli (nueva app) -->
+        <div class="app-card">
+            <img src="https://play-lh.googleusercontent.com/ayyGjlA-8qOiv-fBr5cKfX8mJmZx2ifbsy-BODc88VYLwmsEWRddA4bPVUaY8ZNjsg=w480-h960-rw" alt="Imagen de RN Hooli">
+            <h2>RN Hooli</h2>
+            <a href="https://play.google.com/store/apps/details?id=net.airata.hoolisur&hl=es_AR" target="_blank">
+                <button class="rn-hooli-button">Verificar versión</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenedor para el logo -->
+    <div class="logo-container">
+        <h3>¡Gracias por usar nuestra herramienta!</h3>
+        <p>¡Disfruta verificando las versiones de tus aplicaciones!</p>
+        <img src="imagen/" alt="Imagen de pie de página" style="width: 100px; height: 100px; border-radius: 50%; margin-top: 20px;">
+        <p>&copy; <span id="year"></span> 2025 Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+        // Función que cambia el fondo según la hora
+        function cambiarFondoSegunHora() {
+            var now = new Date();
+            var hours = now.getHours();
+            var fondo;
+    
+            if (hours >= 6 && hours < 12) {
+                fondo = "url('imagen/amanecer.jpg')"; // Imagen de amanecer
+            } else if (hours >= 12 && hours < 18) {
+                fondo = "url('imagen/dia.jpg')"; // Imagen de día
+            } else if (hours >= 18 && hours < 20) {
+                fondo = "url('imagen/atardecer.jpg')"; // Imagen de atardecer
+            } else {
+                fondo = "url('imagen/noche.jpg')"; // Imagen de noche
+            }
+    
+            // Cambiar el fondo de la página
+            document.body.style.backgroundImage = fondo;
+            document.body.style.backgroundSize = 'cover'; // Asegura que la imagen cubra toda la pantalla
+            document.body.style.backgroundPosition = 'center'; // Centra la imagen de fondo
+            document.body.style.backgroundRepeat = 'no-repeat'; // Evita que se repita la imagen
+        }
+
+        // Función para actualizar la hora y fecha
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            var date = now.toLocaleDateString('es-AR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+            document.getElementById('clock').textContent = `${date} - ${hours}:${minutes}:${seconds}`;
+        }
+
+        // Llamar a la función al cargar la página y cada segundo
+        setInterval(updateClock, 1000);
+        updateClock(); // Llamar a la función de inmediato para mostrar la hora sin espera.
+
+        // Llamar a la función de cambiar fondo
+        window.onload = cambiarFondoSegunHora;
+    </script>
+</body>
+</html>
